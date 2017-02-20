@@ -13,12 +13,16 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py<35]
+  skip: true  # [win and py<36]
+  features:   # [win]
+    - vc14    # [win]
 
 requirements:
   build:
     - toolchain
     - cmake
+    - python  # [win]
+    - vc 14   # [win and py>=35]
     - cppzmq
     - zeromq
     - cryptopp
@@ -28,6 +32,7 @@ requirements:
     - zeromq
     - cryptopp
     - libuuid  # [linux]
+    - vc 14    # [win and py>=35]
     
 test:
   commands:
