@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "c20c21ce1c61155bef67e11959a0c52bc6f3be8c70f6306963b6faa4cac1ff79" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "778fadf459beec37788eeae93efc40b9ade624c69f631b4f96447071e03eb4d4" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py<36]
+  skip: true  # [win and py<35]
   features:   # [win]
     - vc14    # [win]
 
