@@ -1,0 +1,13 @@
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- toolchain_cxx
+docker_image:
+- condaforge/linux-anvil
+libuuid:
+- 2.32.1
+pin_run_as_build:
+  libuuid:
+    max_pin: x
