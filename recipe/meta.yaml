@@ -31,9 +31,13 @@ requirements:
     - zeromq 4.2.5
     - cryptopp 5.6.5
   run:
-    - zeromq 4.2.5
-    - cryptopp 5.6.5
+    - {{ pin_compatible('zeromq', max_pin='x.x') }}
+    - {{ pin_compatible('cryptopp', max_pin='x.x') }}
     - libuuid  # [linux]
+  run_constrained:
+    - {{ pin_compatible('xtl', max_pin='x.x') }}
+    - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
+    - {{ pin_compatible('cppzmq', max_pin='x.x') }}
 
 test:
   commands:
