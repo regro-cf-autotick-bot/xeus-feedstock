@@ -17,6 +17,8 @@ build:
   {% if 'toolchain' in compiler('cxx') %}skip: True{% endif %}  # Only build with modern compilers.
   features:  # [win]
     - vc14  # [win]
+  run_exports:
+    - {{ pin_subpackage(name, max_pin='x.x') }}
 
 requirements:
   build:
@@ -30,10 +32,9 @@ requirements:
     - cppzmq 4.3.0
     - zeromq 4.2.5
     - cryptopp 5.6.5
+  # cryptopp doesn't have run_exports yet. Rely on pin_run_as_build
   run:
-    - {{ pin_compatible('zeromq', max_pin='x.x') }}
     - {{ pin_compatible('cryptopp', max_pin='x.x') }}
-    - libuuid  # [linux]
   run_constrained:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
