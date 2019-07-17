@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -27,7 +27,7 @@ requirements:
     - nlohmann_json >=3.2.0,<4.0
     - libuuid  # [linux]
     - cppzmq 4.3.0
-    - zeromq 4.3.1
+    - zeromq >=4.3.1,<4.4
     - openssl >=1.0.1,<1.2
   # zeromq and libuuid have run_exports sections. No need to add them as run
   # requirements. xeus headers expose headers from nlohmann_json, cppzmq and
