@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/QuantStack/xeus/archive/{{ version }}.tar.gz
+  url: https://github.com/jupyter-xeus/xeus/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -55,7 +55,7 @@ about:
   summary: 'C++ implementation of the Jupyter Kernel protocol'
   description: 'xeus is a library meant to facilitate the implementation of kernels for Jupyter. It takes the burden of implementing the Jupyter Kernel protocol so developers can focus on implementing the interpreter part of the Kernel.'
   doc_url: http://xeus.readthedocs.io
-  dev_url: https://github.com/QuantStack/xeus
+  dev_url: https://github.com/jupyter-xeus/xeus
 
 extra:
   recipe-maintainers:
