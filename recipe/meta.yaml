@@ -27,7 +27,7 @@ requirements:
     - xtl >=0.6.1,<0.7
     - nlohmann_json >=3.2.0,<4.0
     - libuuid  # [linux]
-    - cppzmq 4.4.1
+    - cppzmq >=4.3.0,<5
     - zeromq >=4.3.1,<4.4
     - openssl >=1.0.1,<1.2
   # zeromq and libuuid have run_exports sections. No need to add them as run
