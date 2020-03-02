@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "0.23.5" %}
-{% set sha256 = "691e5521d1d77d532516cd4bef73d915c40213e6bf43eed4bcafe03382356b33" %}
+{% set version = "0.23.6" %}
+{% set sha256 = "0c722db60eb5cae3cac9a42cf31f946fae5e75b9563788eb43b2e83459221dd8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -27,7 +27,7 @@ requirements:
     - xtl >=0.6.1,<0.7
     - nlohmann_json >=3.2.0,<4.0
     - libuuid  # [linux]
-    - cppzmq >=4.3.0,<5
+    - cppzmq >=4.4.1,<5
     - zeromq >=4.3.1,<4.4
     - openssl >=1.0.1,<1.2
   # zeromq and libuuid have run_exports sections. No need to add them as run
