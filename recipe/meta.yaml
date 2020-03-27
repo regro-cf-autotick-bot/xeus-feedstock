@@ -50,7 +50,7 @@ test:
 
 about:
   home: http://quantstack.net/xeus
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'C++ implementation of the Jupyter Kernel protocol'
