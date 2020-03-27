@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "0.23.9" %}
-{% set sha256 = "ab79eee30cd2b37502fbd0dc75c54a53f81427b83d21fc9803483daf201e3752" %}
+{% set version = "0.23.10" %}
+{% set sha256 = "ec26490226d65cc7c7f62de81117f0d3f1db7def9c5078438e179c73b3e86cef" %}
 
 package:
   name: {{ name|lower }}
@@ -50,7 +50,7 @@ test:
 
 about:
   home: http://quantstack.net/xeus
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'C++ implementation of the Jupyter Kernel protocol'
