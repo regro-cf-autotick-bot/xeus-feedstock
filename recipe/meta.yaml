@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "0.23.12" %}
-{% set sha256 = "6f4ecb776da68c38b80052ca378c55940e60c3f0bf163bf6324ca30915031f52" %}
+{% set version = "0.23.13" %}
+{% set sha256 = "1c521fc7985daf71bb4452cc6480c15b33b3af5c0c60516eb6f5e6dc9754bb61" %}
 
 package:
   name: {{ name|lower }}
@@ -53,8 +53,9 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'C++ implementation of the Jupyter Kernel protocol'
-  description: 'xeus is a library meant to facilitate the implementation of kernels for Jupyter. It takes the burden of implementing the Jupyter Kernel protocol so developers can focus on implementing the interpreter part of the Kernel.'
+  summary: C++ implementation of the Jupyter Kernel protocol
+  description: xeus is a library meant to facilitate the implementation of kernels for Jupyter. It takes the burden of implementing the Jupyter Kernel protocol so
+    developers can focus on implementing the interpreter part of the Kernel.
   doc_url: http://xeus.readthedocs.io
   dev_url: https://github.com/jupyter-xeus/xeus
 
