@@ -3,10 +3,7 @@
 
 language: generic
 
-env:
-  global:
-    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "mv5Y8m7VeAQGNoIYqhMJWW0bskCC5DzJo/Q4+JnH/R2MeY9YpSQ+odgp1milMBM6388jHMDTxSoJLI4pSS6M17/XrPlvYD+DpVMYFk4MOxQ1cnkMbJd63V+moOvF3src8I4KbbPXcLoRurWmbsOvewHC1XX2gSgoqFycMGssSYDYUrVkIFz6MNM5zJXXikH+RtLO9jnurutUBk1A7jgf8JEmkDKv9/iphrPV9TBEfr0uV6RiOrAYMXn8eWYvCufQtMDh6eN7kNvLj880AZGqxbf2FyklYYBGzDPWaTA/tWal4NrnEo5E7ukSepnV1SJewW4daRc/X/AUBIdQN5Unc/xZmxuOWrVs639ONGtx4lrHgdlsnUqMMAfhQ2eziBsAdBjXslvmps5qs8NsN4vQ1p/5/1MhMUx3zDxM/Gg0QLzkX0EwnNWyWZNKocd0mepBIGxK1MOkSCCKap+EhvN4+jCHFLoQRPXFdBaSPTOiPkmAbh2GtVyTIrisrM2ALaUf8FWyepkDsbh009gn5+hzmxDWwoep5NPxHdPZ6N8CvBUmM++32choJpEu7t23iUNZfNVfhUgXZA1uVfn3+nH+RnRSPkCO9WqHLrJeC5yIgvK8obapqh7osaid4I54O4owTCgqTTN52qhGAuqUsoxkiVeLVaDIKZkmGx59MnIRNAk="
+
 
 matrix:
   include:
@@ -17,6 +14,7 @@ matrix:
 script:
   - export CI=travis
   - export GIT_BRANCH="$TRAVIS_BRANCH"
+  - export FEEDSTOCK_NAME=$(basename ${TRAVIS_REPO_SLUG})
 
 
   - if [[ ${PLATFORM} =~ .*linux.* ]]; then ./.scripts/run_docker_build.sh; fi
