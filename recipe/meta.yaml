@@ -28,7 +28,7 @@ requirements:
     - nlohmann_json >=3.2.0,<4.0
     - libuuid  # [linux]
     - cppzmq >=4.4.1,<5
-    - zeromq >=4.3.1,<4.4
+    - zeromq
     - openssl >=1.0.1,<1.2
   # zeromq and libuuid have run_exports sections. No need to add them as run
   # requirements. xeus headers expose headers from nlohmann_json, cppzmq and
