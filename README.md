@@ -5,9 +5,13 @@ Home: http://quantstack.net/xeus
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-feedstock/blob/master/LICENSE.txt)
 
 Summary: C++ implementation of the Jupyter Kernel protocol
+
+Development: https://github.com/jupyter-xeus/xeus
+
+Documentation: http://xeus.readthedocs.io
 
 xeus is a library meant to facilitate the implementation of kernels for Jupyter. It takes the burden of implementing the Jupyter Kernel protocol so developers can focus on implementing the interpreter part of the Kernel.
 
