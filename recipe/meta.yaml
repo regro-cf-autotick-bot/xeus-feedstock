@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "0.24.3" %}
-{% set sha256 = "42c07c7fe1f45ff9d285e609f52b1b0dd85183ed85427f0f18a94dcea2f81f5e" %}
+{% set version = "0.24.4" %}
+{% set sha256 = "8165d87ca2308909c64cf918ab698cad3a5cb8db658da10cb38d78be6d76595a" %}
 
 package:
   name: {{ name|lower }}
