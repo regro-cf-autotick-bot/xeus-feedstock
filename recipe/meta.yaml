@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "0.25.0" %}
-{% set sha256 = "528fcb11b692f20245cd4c952833d9e9a9b0aabec9f5cdbd57077b51f124ce09" %}
+{% set version = "0.25.1" %}
+{% set sha256 = "358ab8cb7f8350cdb3c7dfa89b97994cc17984f5952145ea06481b3fe957208d" %}
 
 package:
   name: {{ name|lower }}
@@ -44,9 +44,9 @@ test:
     - test -f ${PREFIX}/include/xeus/xeus.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xeus/xeusConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xeus/xeusConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_INC%\\xeus\\xeus.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_LIB%\\cmake\\xeus\\xeusConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_LIB%\\cmake\\xeus\\xeusConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if not exist %LIBRARY_INC%\\xeus\\xeus.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_LIB%\\cmake\\xeus\\xeusConfig.cmake (exit 0)  # [win]
+    - if not exist %LIBRARY_LIB%\\cmake\\xeus\\xeusConfigVersion.cmake (exit 0)  # [win]
 
 about:
   home: http://quantstack.net/xeus
