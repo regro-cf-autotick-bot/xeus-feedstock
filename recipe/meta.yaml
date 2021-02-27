@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -49,13 +49,13 @@ test:
     - if exist %LIBRARY_LIB%\\cmake\\xeus\\xeusConfigVersion.cmake (exit 0) else (exit 1)  # [win]
 
 about:
-  home: http://quantstack.net/xeus
+  home: https://github.com/jupyter-xeus/xeus
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: C++ implementation of the Jupyter Kernel protocol
   description: xeus is a library meant to facilitate the implementation of kernels for Jupyter. It takes the burden of implementing the Jupyter Kernel protocol so developers can focus on implementing the interpreter part of the Kernel.
-  doc_url: http://xeus.readthedocs.io
+  doc_url: https://xeus.readthedocs.io
   dev_url: https://github.com/jupyter-xeus/xeus
 
 extra:
