@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "8f107eb67c42acf4d627065fed1d8ee889bfe22d22713b3ebd82382274d7ecbd" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "04fa4218d7471ed97d1846e937ec45d8698b0f2f9809c2fd2e7fd226721c0a1d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
